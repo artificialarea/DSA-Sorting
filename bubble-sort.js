@@ -27,7 +27,8 @@ function bubbleSort(array) {
 
 let data = [67, 23, 8, 6, 9, 45, 2];
 
-console.log(bubbleSort(data));
+console.log('original data: ', JSON.stringify(data));
+console.log('bubble sorted: ', JSON.stringify(bubbleSort(data)));
 
 
 /*

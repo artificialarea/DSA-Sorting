@@ -156,18 +156,8 @@ class LinkedList {
 }
 
 const linkedListHelpers = {
-  findByIndex: function(list, index) {
-    if (!list.head) {return null}
-    let counter = 0;
-    let currentNode = list.head;
-    while (counter < index) {
-      if (!currentNode.next) {return null} // If the index does not exist in our list
-      currentNode = currentNode.next;
-      counter++;
-    }
-    return currentNode;
-  },
-    display: function(list) {
+    
+    display: function (list) {
         if (!list.head) {
             console.log('The list is empty');
             return;
@@ -178,7 +168,7 @@ const linkedListHelpers = {
             currentNode = currentNode.next;
         }
     },
-    size: function(list) {
+    size: function (list) {
         let counter = 0;
         let currentNode = list.head;
         while (currentNode) {
@@ -188,11 +178,11 @@ const linkedListHelpers = {
         // console.log('List size: ', counter);
         return counter;
     },
-    isEmpty: function(list) {
+    isEmpty: function (list) {
         if (!list.head) return true;
         return false;
     },
-    findPrevious: function(value, list) {
+    findPrevious: function (value, list) {
         if (!list.head) return null; // anyway to make validation DRY? like an .all() in Express router?
 
         let currentNode = list.head;
@@ -210,23 +200,34 @@ const linkedListHelpers = {
 
 
     },
-    findLast: function(list) {
+    findLast: function (list) {
         if (!list.head) return null;
 
         let currentNode = list.head;
 
-        while(currentNode.next) {
+        while (currentNode.next) {
             currentNode = currentNode.next;
         }
         console.log('Last node: ', currentNode);
         return currentNode;
     },
-    removeDuplicates: function(list) {
+    findByIndex: function (list, index) {
+        if (!list.head) { return null }
+        let counter = 0;
+        let currentNode = list.head;
+        while (counter < index) {
+            if (!currentNode.next) { return null } // If the index does not exist in our list
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode;
+    },
+    removeDuplicates: function (list) {
         let current = list.head;
-        
+
         while (current !== null) {
             let newNode = current;
-            
+
             while (newNode.next !== null) {
                 if (newNode.next.value === current.value) {
                     newNode.next = newNode.next.next;

@@ -70,8 +70,24 @@ Which two lists would be merged on the 7th merge?
 see: **[`quicksort.js`](https://github.com/artificialarea/DSA-Sorting/blob/main/quicksort.js)**
 
 
+
+<br />
+
 ## 4. Implementing merge sort
 
 see: **[`merge-sort.js`](https://github.com/artificialarea/DSA-Sorting/blob/main/merge-sort.js)**
 
-**QUESTION: Are the console.log counters we have for quicksort and merge sort correct? Merge sort count: 100, Quicksort count:650 !!?!?**
+> **QUESTION: Are the console.log counters we have for quicksort and merge sort correct? Merge sort count: 99, Quicksort count:650 !!?!?**
+
+
+
+<br />
+
+## 5. Sorting a linked list using merge sort
+
+see: **[`merge-sort-linked-list.js`](https://github.com/artificialarea/DSA-Sorting/blob/main/merge-sort-linked-list.js)** + [`linked-list.js`](https://github.com/artificialarea/DSA-Sorting/blob/main/linked-list.js)
+
+
+
+
+<br />
