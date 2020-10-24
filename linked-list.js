@@ -156,6 +156,17 @@ class LinkedList {
 }
 
 const linkedListHelpers = {
+  findByIndex: function(list, index) {
+    if (!list.head) {return null}
+    let counter = 0;
+    let currentNode = list.head;
+    while (counter < index) {
+      if (!currentNode.next) {return null} // If the index does not exist in our list
+      currentNode = currentNode.next;
+      counter++;
+    }
+    return currentNode;
+  },
     display: function(list) {
         if (!list.head) {
             console.log('The list is empty');
