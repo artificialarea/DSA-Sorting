@@ -13,6 +13,8 @@ function mergeSort(array) {
     return merge(left, right, array);
 };
 
+let count = 0; // for console.log
+
 function merge(left, right, array) {
     let leftIndex = 0;
     let rightIndex = 0;
@@ -35,12 +37,14 @@ function merge(left, right, array) {
         array[outputIndex++] = right[i];
     }
 
-    console.log('left: ', JSON.stringify(left), '\nright: ', JSON.stringify(right), '\narray: ', JSON.stringify(array));
+    
+    count++; // for console.log
+    console.log('count: ', count, '\nleft: ', JSON.stringify(left), '\nright: ', JSON.stringify(right), '\narray: ', JSON.stringify(array));
 
     return array;
 };
 
-let data = [67, 23, 8, 6, 9, 45, 2];
+let data = [21, 1, 26, 45, 29, 28, 2, 9, 16, 49, 39, 27, 43, 34, 46, 40];
 
 console.log(mergeSort(data));
 
