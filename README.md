@@ -48,6 +48,8 @@ Which two lists would be merged on the 7th merge?
 
 ## 2. understanding quicksort
 
+### UNABLE TO SOLVE THESE, REVISIT >_<
+
 1 ] Which of the following statements is correct about the partition step? Explain your answer.
 
 > **The pivot could have been either 14 or 17.** Just ask, if I start with the number in the last index in the array and look left, at what point do I see a number that is lower? In both above cases, the point is at the number 20.
@@ -57,40 +59,12 @@ Which two lists would be merged on the 7th merge?
 
 2 ] Given the following list of numbers `14, 17, 13, 15, 19, 10, 3, 16, 9, 12` show the resulting list after the second partitioning according to the quicksort algorithm.
 
-init
-    14, 17, 13, 15, 19, 10, 3,  16, 9,  12         
-1st pass
-    10, 3,  9,  12, 15, 19, 14, 17, 16, 13
-2nd pass
-
-2nd pass process
-mine
-                i
-    3,  9,  10, 12, 15, 19, 14, 17, 16, 13
-            j
-                                        p
-
-marius
-                i
-    3,  9,  10, 12, 15, 19, 14, 17, 16, 13
-            j
-                                        p
 
 
 
- 
-    j                
-    10, 3, 9, 12, 15, 19, 14, 17, 16, 13
-i                                  
-
-               j                
-    3, 9, 12, 10, 15, 19, 14, 17, 16, 13
-          i                  
+<br />
 
 
-if (array[i] <= pivot) {
-    swap(array, i, j);
-    j++;
-}
+## 3. Implementing quickstort
 
-
+see: **[`quicksort.js`](https://github.com/artificialarea/DSA-Sorting/blob/main/quicksort.js)**
