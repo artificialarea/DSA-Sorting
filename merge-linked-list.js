@@ -14,7 +14,7 @@ brianSachaList.insertFirst(82)
 brianSachaList.insertFirst(17)
 brianSachaList.insertFirst(27)
 
-console.log(JSON.stringify(brianSachaList, null, 2))
+// console.log(JSON.stringify(brianSachaList, null, 2))
 
 
 function mergeSort(list) {
@@ -68,7 +68,7 @@ function subList(list, start, stop){
     let counter = start
     let currentNode = linkedListHelpers.findByIndex(list, start)
 
-    while (counter , stop){
+    while (counter < stop){
         if (!currentNode) {throw Error ('subList called out of bounds of linked list')}
         result.insertLast(currentNode.value)
         currentNode = currentNode.next

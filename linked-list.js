@@ -185,7 +185,7 @@ const linkedListHelpers = {
             counter++;
             currentNode = currentNode.next;
         }
-        console.log('List size: ', counter);
+        // console.log('List size: ', counter);
         return counter;
     },
     isEmpty: function(list) {
