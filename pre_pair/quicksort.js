@@ -22,17 +22,22 @@ function partition(array, start, end) {
     let j = start;
     for (let i = start; i < end - 1; i++) {
         console.log(JSON.stringify(array));
+        console.log('i: ', array[i], 'j: ', array[j]);
+        console.log(`is ${array[i]} =< ${pivot} ?`)
         if (array[i] <= pivot) {
-            console.log(array[i], pivot);
+            console.log(`yes... ${array[i]} is less than ${pivot}`);
+            console.log(`swap ${array[i]} with ${array[j]}`);
+            console.log(JSON.stringify(array));
             swap(array, i, j);
             j++;
         }
     }
+    console.log(`\nplace pivot in the middle, then start over\n`)
     swap(array, end-1, j);
     return j;
 };
 
-let data = [67, 23, 8, 6, 9, 45, 2];
+let data = [14, 17, 13, 15, 19, 10, 3, 16, 9, 12];
 
 console.log(quickSort(data));
 
