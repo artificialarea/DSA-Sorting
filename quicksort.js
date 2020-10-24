@@ -15,6 +15,8 @@ function quickSort(array, start = 0, end = array.length) {
     return array;
 };
 
+let count = 0;
+
 // There are different partitioning algorithms. 
 // A common in-place algorithm is Lomuto's algorithm:
 function partition(array, start, end) {
@@ -22,6 +24,8 @@ function partition(array, start, end) {
     // console.log('pivot: ', pivot);
     let j = start;
     for (let i = start; i < end - 1; i++) {
+        count++;
+        console.log('counter: ', count);
         // console.log(JSON.stringify(array));
         // console.log('i: ', array[i], 'j: ', array[j]);
         // console.log(`is ${array[i]} =< ${pivot} ?`)
